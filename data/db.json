@@ -1,7 +1,28 @@
 {
-  "jobs": [
-    { "title": "Ninja UX Designer", "id": 1, "details": "lorem" },
-    { "title": "Ninja Web Developer", "id": 2, "details": "lorem" },
-    { "title": "Ninja Vue Developer", "id": 3, "details": "lorem" }
+  "projects": [
+    {
+      "title": "Create new homepage banner",
+      "id": 1,
+      "details": "Because it needs to be beautifulll",
+      "complete": true
+    },
+    {
+      "title": "Make marketing email",
+      "id": 2,
+      "details": "lorem",
+      "complete": true
+    },
+    {
+      "title": "Update promo links",
+      "id": 3,
+      "details": "lorem",
+      "complete": false
+    },
+    {
+      "title": "test",
+      "details": "asd",
+      "complete": false,
+      "id": 4
+    }
   ]
 }

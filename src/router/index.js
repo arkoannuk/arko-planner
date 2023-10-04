@@ -1,42 +1,31 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import AboutView from '../views/AboutView.vue'
-import JobsView from '../views/jobs/JobsView.vue'
-import JobDetails from '../views/jobs/JobDetails.vue'
-import NotFound from '../views/NotFound.vue'
+import { createRouter, createWebHistory } from "vue-router"
+import Home from "../view/HomeView.vue"
+import NotFound from "../view/NotFound.vue"
+import Add from "../view/AddProjectView.vue"
+import EditProjectView from "../view/EditProjectView.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: HomeView
+      path: "/",
+      name: "Home",
+      component: Home
     },
     {
-      path: '/about',
-      name: 'about',
-      component: AboutView
+      path: "/add",
+      name: "AddProject",
+      component: Add
     },
     {
-      path: '/jobs',
-      name: 'jobs',
-      component: JobsView
-    },
-    {
-      path: '/jobs/:id',
-      name: 'JobDetails',
-      component: JobDetails,
+      path: "/projects/:id",
+      name: "EditProject",
+      component: EditProjectView,
       props: true
-    },
-    //redirects
-    {
-      path: '/all-jobs',
-      redirect: '/jobs'
     },
     // catchall 404
     {
-      path: '/:catchAll(.*)',
+      path: "/:catchAll(.*)",
       component: NotFound
     }
   ]
